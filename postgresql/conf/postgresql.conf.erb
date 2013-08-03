@@ -19,8 +19,8 @@ external_pid_file = '<%= ENV['OPENSHIFT_POSTGRESQL_DB_PID'] %>'
 #------------------------------------------------------------------------------
 # CONNECTIONS AND AUTHENTICATION
 #------------------------------------------------------------------------------
-listen_addresses = '<%= ENV['OPENSHIFT_POSTGRESQL_DB_HOST'] %>'
-port = <%= ENV['OPENSHIFT_POSTGRESQL_DB_PORT'] %>
+listen_addresses = '<%= ENV['OPENSHIFT_OWF_DB_HOST'] %>'
+port = <%= ENV['OPENSHIFT_OWF_DB_PORT'] %>
 max_connections = 10
 unix_socket_directory = '<%= ENV['OPENSHIFT_POSTGRESQL_DB_SOCKET'] %>'
 unix_socket_permissions = 0700
