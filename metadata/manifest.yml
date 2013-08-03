@@ -1,15 +1,15 @@
-Name: jbossews
-Cartridge-Short-Name: JBOSSEWS
-Cartridge-Vendor: redhat
+Name: owf
+Cartridge-Short-Name: OWF
+Cartridge-Vendor: pvm
 Cartridge-Version: '0.0.4'
 Compatible-Versions: ['0.0.2', '0.0.3']
-Display-Name: Tomcat 7 (JBoss EWS 2.0)
-Description: "JBoss Enterprise Web Server is the enterprise-class Java web container for large-scale lightweight web applications based on Tomcat 7. Build and deploy JSPs and Servlets in the cloud."
+Display-Name: Ozone Widget Framework 7 (OWF7)
+Description: "Build and deploy Ozone Widgets in the cloud."
 Version: '2.0'
 Versions: ['2.0', '1.0']
-License: LGPL
-License-Url: http://www.gnu.org/copyleft/lesser.txt
-Vendor:  jboss.com
+License: Apache
+License-Url: http://the.apache.com/license/url
+Vendor:  pvm.com
 Categories:
   - service
   - java
