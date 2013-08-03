@@ -2,15 +2,12 @@
 
 Summary:       Provides Ozone Widget Framework  support
 Name:          owf-cartridge
-Version: 0.8.1
+Version: 0.8.2
 Release:       1%{?dist}
 Group:         Development/Frameworks
 License:       ASL 2.0
 URL:           http://www.owfgoss.org
 Source0:       https://https://www.assembla.com/code/pvm-occp-engineering/git/nodes
-
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildArch:     noarch
 
 Requires:      openshift-origin-cartridge-jbossews
 Requires:      openshift-origin-cartridge-postgresql
@@ -20,6 +17,11 @@ Requires:      maven3
 %if 0%{?fedora}
 Requires:      maven
 %endif
+BuildRequires: jpackage-utils
+BuildArch:     noarch
+
+Obsoletes:  pvm-aif-cartridge-2.0.0
+Obsoletes:  pvm-owf-cartridge-7.1.0
 
 
 %description
@@ -51,6 +53,9 @@ Provides OWF7 support to OpenShift. (Cartridge Format V2)
 %doc %{cartridgedir}/LICENSE
 
 %changelog
+* Fri Aug 02 2013 Unknown name 0.8.2-1
+- 
+
 * Fri Aug 02 2013 Bret Frederick 
 - new package built with tito
 
