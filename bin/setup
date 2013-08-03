@@ -5,7 +5,7 @@ case "$1" in
     version="$2"
 esac
 
-SYSTEM_JBOSSEWS_DIR="/etc/alternatives/jbossews-${version}"
+SYSTEM_JBOSSEWS_DIR="/etc/alternatives/jbossews-2.0"
 
 if [ ! -d ${SYSTEM_JBOSSEWS_DIR} ]; then
   echo "Couldn't find system jbossews dir at ${SYSTEM_JBOSSEWS_DIR}" 1>&2
