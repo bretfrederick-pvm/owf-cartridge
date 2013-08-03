@@ -50,6 +50,13 @@ alternatives --install /etc/alternatives/maven-3.0 maven-3.0 /usr/share/maven 10
 alternatives --set maven-3.0 /usr/share/maven
 %endif
 
+/usr/sbin/oo-admin-cartridge -a install -r %{cartridgedir}
+/usr/sbin/oo-admin-broker-cache -c --console
+
+%postun
+rm -rf /var/lib/openshift/.cartridge_repository/owf
+/usr/sbin/oo-admin-broker-cache -c --console
+
 %files
 %dir %{cartridgedir}
 %attr(0755,-,-) %{cartridgedir}/bin/
