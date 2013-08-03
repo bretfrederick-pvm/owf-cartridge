@@ -1,6 +1,6 @@
 Name: owf
 Cartridge-Short-Name: OWF
-Cartridge-Vendor: 
+Cartridge-Vendor: pvm
 Cartridge-Version: '0.0.1'
 Compatible-Versions: ['0.0.2', '0.0.3']
 Display-Name: Ozone Widget Framework 7 (OWF7)
