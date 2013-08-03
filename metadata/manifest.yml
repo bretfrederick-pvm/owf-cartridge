@@ -1,39 +1,27 @@
-Name: owf
-Cartridge-Short-Name: OWF
-Cartridge-Vendor: PVM
-Cartridge-Version: '7.0.0'
-Compatible-Versions: ['8.0.0']
-Display-Name: Ozone Widget Framework 7 (OWF7)
-Description: "A customizable open-source web application that assembles the tools you need to accomplish any task and enables those tools to communicate with each other.  Build your Ozone Widgets in the cloud"
+Name: jbossews
+Cartridge-Short-Name: JBOSSEWS
+Cartridge-Vendor: redhat
+Cartridge-Version: '0.0.4'
+Compatible-Versions: ['0.0.2', '0.0.3']
+Display-Name: Tomcat 7 (JBoss EWS 2.0)
+Description: "JBoss Enterprise Web Server is the enterprise-class Java web container for large-scale lightweight web applications based on Tomcat 7. Build and deploy JSPs and Servlets in the cloud."
 Version: '2.0'
 Versions: ['2.0', '1.0']
-License: Apache
-License-Url: http://www.apache.org/licenses/LICENSE-2.0
-Vendor:  patvmackinc.com
+License: LGPL
+License-Url: http://www.gnu.org/copyleft/lesser.txt
+Vendor:  jboss.com
 Categories:
-  - cartridge
   - service
   - java
+  - jboss
   - tomcat
   - tomcat7
   - web_framework
-Website: http://www.owfgoss.org
+Website: http://www.redhat.com/products/jbossenterprisemiddleware/web-server/
 Help-Topics:
   "Developer Center": https://www.openshift.com/developers
 Cart-Data:
-  - Key: "username"
-    Type: cart_data
-    Description: "Root user on PostgreSQL database"
-  - Key: "password"
-    Type: cart_data
-    Description: "Password for root user on PostgreSQL database"
-  - Key: database_name
-    Type: cart_data
-    Description: "PostgreSQL DB name"
-  - Key: connection_url
-    Type: cart_data
-    Description: "PostgreSQL DB connection URL"
-  - Key: OPENSHIFT_JBOSEWS_LOG_DIR
+  - Key: OPENSHIFT_JBOSSEWS_LOG_DIR
     Type: environment
     Description: "Directory to store application log files."
   - Key: OPENSHIFT_TMP_DIR
@@ -70,12 +58,7 @@ Provides:
   - "jbossews(version) >= 2.0"
   - "jboss-ews-2.0"
   - "jboss-ews-2.0.0"
-  - "postgresql-8.4"
-  - "postgresql"
-  - "postgresql(version) = 8.4"
 Publishes:
-  publish-db-connection-info:
-    Type: "ENV:NET_TCP:db:connection-info"
   get-internal-uri:
     Type: "NET_TCP:http"
   publish-http-url:
@@ -103,10 +86,23 @@ Endpoints:
   - Private-IP-Name:   IP
     Private-Port-Name: JPDA_PORT
     Private-Port:      8787
-  - Private-IP-Name:   DB_HOST
-    Private-Port-Name: DB_PORT
-    Private-Port:      5432
-    Public-Port-Name:  DB_PROXY_PORT
 Additional-Control-Actions:
     - threaddump
 Version-Overrides:
+  '1.0':
+    Display-Name: Tomcat 6 (JBoss EWS 1.0)
+    Description: "JBoss Enterprise Web Server is the enterprise-class Java web container for large-scale lightweight web applications based on Tomcat 6. Build and deploy JSPs and Servlets in the cloud."
+    Provides:
+      - "jbossews-1.0"
+      - "jbossews"
+      - "jbossews(version) = 1.0.0"
+      - "jbossews(version) >= 1.0"
+      - "jboss-ews-1.0"
+      - "jboss-ews-1.0.0"
+    Categories:
+      - service
+      - java
+      - jboss
+      - tomcat
+      - tomcat6
+      - web_framework
