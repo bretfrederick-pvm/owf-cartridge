@@ -2,7 +2,7 @@
 set -e
 set -x
 
-tmp=${OPENSHIFT_JBOSSEWS_DIR}/tmp
+tmp=${OPENSHIFT_OWF_DIR}/tmp
 if [ -d $tmp ]; then
   for d in $tmp/*; do
       if [ -d $d ]; then
@@ -13,7 +13,7 @@ if [ -d $tmp ]; then
 fi
 
 if [ -d ${OPENSHIFT_REPO_DIR}/webapps ]; then
-  rsync -r --delete ${OPENSHIFT_REPO_DIR}/webapps/ ${OPENSHIFT_JBOSSEWS_DIR}/webapps/
+  rsync -r --delete ${OPENSHIFT_REPO_DIR}/webapps/ ${OPENSHIFT_OWF_DIR}/webapps/
 else
-  rm -rf ${OPENSHIFT_JBOSSEWS_DIR}/webapps/*
+  rm -rf ${OPENSHIFT_OWF_DIR}/webapps/*
 fi
