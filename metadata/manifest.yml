@@ -6,7 +6,7 @@ Compatible-Versions: ['0.0.2', '0.0.3']
 Display-Name: Ozone Widget Framework 7 (OWF7)
 Description: "Build and deploy Ozone Widgets in the cloud."
 Version: '7'
-Versions: ['2.0', '1.0']
+Versions: ['7', '8']
 License: Apache
 License-Url: http://the.apache.com/license/url
 Vendor:  pvm.com
@@ -89,9 +89,9 @@ Endpoints:
 Additional-Control-Actions:
     - threaddump
 Version-Overrides:
-  '1.0':
-    Display-Name: Tomcat 6 (JBoss EWS 1.0)
-    Description: "JBoss Enterprise Web Server is the enterprise-class Java web container for large-scale lightweight web applications based on Tomcat 6. Build and deploy JSPs and Servlets in the cloud."
+  '8':
+    Display-Name: (InOp, Under Dev) Ozone Widget Framework 8 (OWF8)
+    Description: "Build and deploy Ozone Widgets in the cloud."
     Provides:
       - "jbossews-1.0"
       - "jbossews"

@@ -57,7 +57,7 @@ alternatives --set maven-3.0 /usr/share/maven
 
 %postun
 /bin/echo "   - Uninstalling cart...\n"
-rm -rf /var/lib/openshift/.cartridge_repository/owf
+rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
 /bin/echo "   - Clearing Broker cache...\n"
 /usr/sbin/oo-admin-broker-cache -c --console
 
