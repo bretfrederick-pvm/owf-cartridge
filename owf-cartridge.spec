@@ -2,7 +2,7 @@
 
 Summary:       Provides Ozone Widget Framework  support
 Name:          owf-cartridge
-Version: 0.8.2
+Version: 0.8.3
 Release:       1%{?dist}
 Group:         Development/Frameworks
 License:       ASL 2.0
@@ -53,7 +53,10 @@ Provides OWF7 support to OpenShift. (Cartridge Format V2)
 %doc %{cartridgedir}/LICENSE
 
 %changelog
-* Fri Aug 02 2013 Unknown name 0.8.2-1
+* Fri Aug 02 2013 Bret Frederick
+- new owf cart (root@odin.dev.patvmackinc.com)
+
+* Fri Aug 02 2013 Unknown name 0.8.3-1
 - 
 
 * Fri Aug 02 2013 Bret Frederick 
