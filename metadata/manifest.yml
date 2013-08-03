@@ -1,11 +1,11 @@
 Name: owf
 Cartridge-Short-Name: OWF
 Cartridge-Vendor: pvm
-Cartridge-Version: '0.0.4'
+Cartridge-Version: '0.0.1'
 Compatible-Versions: ['0.0.2', '0.0.3']
 Display-Name: Ozone Widget Framework 7 (OWF7)
 Description: "Build and deploy Ozone Widgets in the cloud."
-Version: '2.0'
+Version: '7'
 Versions: ['2.0', '1.0']
 License: Apache
 License-Url: http://the.apache.com/license/url
