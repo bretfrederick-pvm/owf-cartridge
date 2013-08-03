@@ -54,3 +54,6 @@ if $migrate_webapps; then
     shopt -u dotglob
   fi
 fi
+
+echo $OPENSHIFT_OWF_DIR
+mkdir -p $OPENSHIFT_OWF_DIR/postgresql/{log,pid,socket,data,run}

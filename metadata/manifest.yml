@@ -13,14 +13,24 @@ Vendor:  pvm.com
 Categories:
   - service
   - java
-  - jboss
-  - tomcat
   - tomcat7
   - web_framework
 Website: http://www.redhat.com/products/jbossenterprisemiddleware/web-server/
 Help-Topics:
   "Developer Center": https://www.openshift.com/developers
 Cart-Data:
+  - Key: "username"
+    Type: cart_data
+    Description: "Root user on PostgreSQL database"
+  - Key: "password"
+    Type: cart_data
+    Description: "Password for root user on PostgreSQL database"
+  - Key: database_name
+    Type: cart_data
+    Description: "PostgreSQL DB name"
+  - Key: connection_url
+    Type: cart_data
+    Description: "PostgreSQL DB connection URL"
   - Key: OPENSHIFT_JBOSSEWS_LOG_DIR
     Type: environment
     Description: "Directory to store application log files."
@@ -58,6 +68,10 @@ Provides:
   - "jbossews(version) >= 2.0"
   - "jboss-ews-2.0"
   - "jboss-ews-2.0.0"
+  - "postgresql-8.4"
+  - "postgresql"
+Conflicts:
+  - mysql-5.1
 Publishes:
   get-internal-uri:
     Type: "NET_TCP:http"
@@ -65,6 +79,11 @@ Publishes:
     Type: "NET_TCP:httpd-proxy-info"
   publish-gear-endpoint:
     Type: "NET_TCP:gear-endpoint-info"
+  publish-db-connection-info:
+    Type: "ENV:NET_TCP:db:connection-info"
+Scaling:
+  Min: 1
+  Max: 1
 Subscribes:
   set-env:
     Type: "ENV:*"
@@ -86,6 +105,10 @@ Endpoints:
   - Private-IP-Name:   IP
     Private-Port-Name: JPDA_PORT
     Private-Port:      8787
+  - Private-IP-Name:   DB_HOST
+    Private-Port-Name: DB_PORT
+    Private-Port:      5432
+    Public-Port-Name:  DB_PROXY_POR
 Additional-Control-Actions:
     - threaddump
 Version-Overrides:

@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+SCRIPT_PATH="`dirname \"$0\"`"              # relative
+SCRIPT_PATH="`( cd \"$SCRIPT_PATH\" && pwd )`" 
+
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 source ${OPENSHIFT_OWF_DIR}/bin/util
 
@@ -120,15 +123,19 @@ function update_configuration {
 case "$1" in
     start)
         start_app
+	$SCRIPT_PATH/control_postgresql start
         exit 0
     ;;
     graceful-stop|stop)
         stop_app
+	$SCRIPT_PATH/control_postgresql stop
         exit 0
     ;;
     restart|graceful)
         stop_app
+	$SCRIPT_PATH/control_postgresql stop
         start_app
+	$SCRIPT_PATH/control_postgresql start
         exit 0
     ;;
     threaddump)
@@ -146,6 +153,7 @@ case "$1" in
         fi
 
         client_result "The jbossews cartridge is running."
+	$SCRIPT_PATH/control_postgresql status		
         exit 0
     ;;
     build)
