@@ -50,15 +50,11 @@ alternatives --install /etc/alternatives/maven-3.0 maven-3.0 /usr/share/maven 10
 alternatives --set maven-3.0 /usr/share/maven
 %endif
 
-/bin/echo "   - Installing cart...\n"
 /usr/sbin/oo-admin-cartridge -a install -s %{cartridgedir}
-/bin/echo "   - Clearing Broker cache...\n"
 /usr/sbin/oo-admin-broker-cache -c --console
 
 %postun
-/bin/echo "   - Uninstalling cart...\n"
 rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
-/bin/echo "   - Clearing Broker cache...\n"
 /usr/sbin/oo-admin-broker-cache -c --console
 
 %files

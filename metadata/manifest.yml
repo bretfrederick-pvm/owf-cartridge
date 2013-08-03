@@ -5,8 +5,8 @@ Cartridge-Version: '0.0.1'
 Compatible-Versions: ['0.0.2', '0.0.3']
 Display-Name: Ozone Widget Framework 7 (OWF7)
 Description: "Build and deploy Ozone Widgets in the cloud."
-Version: '7'
-Versions: ['7', '8']
+Version: '7.0'
+Versions: ['7.0', '8.0']
 License: Apache
 License-Url: http://the.apache.com/license/url
 Vendor:  pvm.com
@@ -89,7 +89,7 @@ Endpoints:
 Additional-Control-Actions:
     - threaddump
 Version-Overrides:
-  '8':
+  '8.0':
     Display-Name: (InOp, Under Dev) Ozone Widget Framework 8 (OWF8)
     Description: "Build and deploy Ozone Widgets in the cloud."
     Provides:
