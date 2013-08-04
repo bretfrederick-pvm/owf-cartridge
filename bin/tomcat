@@ -54,6 +54,7 @@ fi
 CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/bin/bootstrap.jar"
 CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/bin/commons-logging-tomcat-juli.jar"
 CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/bin/tomcat-juli.jar"
+CLASSPATH="${CLASSPATH}:${CATALINA_HOME}/conf/owf"
 CLASSPATH="${CLASSPATH}:$(build-classpath commons-daemon 2>/dev/null)"
 
 # Filter user-owned configuration files through sed to replace all

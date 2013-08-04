@@ -14,6 +14,7 @@ fi
 
 if [ -d ${OPENSHIFT_REPO_DIR}/webapps ]; then
   rsync -r --delete ${OPENSHIFT_REPO_DIR}/webapps/ ${OPENSHIFT_OWF_DIR}/webapps/
+  cp ${OPENSHIFT_OWF_DIR}/versions/owf.war ${OPENSHIFT_OWF_DIR}/webapps
 else
   rm -rf ${OPENSHIFT_OWF_DIR}/webapps/*
 fi

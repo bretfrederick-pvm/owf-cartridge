@@ -5,6 +5,9 @@ case "$1" in
     version="$2"
 esac
 
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+source ${OPENSHIFT_OWF_DIR}/bin/util
+
 SYSTEM_JBOSSEWS_DIR="/etc/alternatives/jbossews-2.0"
 
 if [ ! -d ${SYSTEM_JBOSSEWS_DIR} ]; then
@@ -27,7 +30,7 @@ mkdir -p ${OPENSHIFT_OWF_DIR}/{run,tmp,conf,logs,webapps}
 mkdir -p ${OPENSHIFT_HOMEDIR}/.m2
 
 # Set up the config directory in the user repository template
-cp ${OPENSHIFT_OWF_DIR}/versions/{shared,${version}}/configuration/* ${OPENSHIFT_OWF_DIR}/template/.openshift/config
+cp -r ${OPENSHIFT_OWF_DIR}/versions/{shared,${version}}/configuration/* ${OPENSHIFT_OWF_DIR}/template/.openshift/config
 
 # Link the system Tomcat binaries to the cart Tomcat instance directory
 ln -sf ${SYSTEM_JBOSSEWS_DIR}/bin/bootstrap.jar ${OPENSHIFT_OWF_DIR}/bin/bootstrap.jar
@@ -45,6 +48,7 @@ ln -sf ${OPENSHIFT_REPO_DIR}/.openshift/config/postgresql_module.xml ${OPENSHIFT
 ln -sf ${OPENSHIFT_REPO_DIR}/.openshift/config/catalina.properties ${OPENSHIFT_OWF_DIR}/conf
 ln -sf ${OPENSHIFT_REPO_DIR}/.openshift/config/catalina.policy ${OPENSHIFT_OWF_DIR}/conf
 ln -sf ${OPENSHIFT_REPO_DIR}/.openshift/config/logging.properties ${OPENSHIFT_OWF_DIR}/conf
+ln -sf ${OPENSHIFT_REPO_DIR}/.openshift/config/owf ${OPENSHIFT_OWF_DIR}/conf
 
 # If migrating, copy the existing app repo contents to the new webapps directory
 if $migrate_webapps; then
@@ -57,3 +61,18 @@ fi
 
 echo $OPENSHIFT_OWF_DIR
 mkdir -p $OPENSHIFT_OWF_DIR/postgresql/{log,pid,socket,data,run}
+
+env_dir="${OPENSHIFT_OWF_DIR}/env"
+
+echo 'Generating username and password'
+
+username=$(generate_username)
+# Force the username to be all lowercase so it works properly with psql
+username=$(echo "${username}" | tr '[:upper:]' '[:lower:]')
+password=$(generate_password)
+
+set_env_var 'OPENSHIFT_POSTGRESQL_DB_USERNAME' $username $env_dir
+set_env_var 'OPENSHIFT_OWF_DB_USERNAME' $username $env_dir
+set_env_var 'PGUSER' $username $env_dir
+set_env_var 'OPENSHIFT_POSTGRESQL_DB_PASSWORD' $password $env_dir
+set_env_var 'OPENSHIFT_OWF_DB_PASSWORD' $password $env_dir

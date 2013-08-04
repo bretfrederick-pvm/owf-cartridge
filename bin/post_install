@@ -1,5 +1,8 @@
 #!/bin/bash -eu
 
+source ${OPENSHIFT_OWF_DIR}/bin/util
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
 cp $OPENSHIFT_OWF_DIR/webapps/ROOT.war $OPENSHIFT_REPO_DIR/webapps
 
 socket=$OPENSHIFT_POSTGRESQL_DB_SOCKET
@@ -17,9 +20,21 @@ db=$OPENSHIFT_APP_NAME
   createdb -O $user -U postgres -h $socket $db
 } || error "Failed to create database" 188
 
+# import the initial OWF preferences
+{
+  psql -d $db -h $socket -U postgres -f ${OPENSHIFT_OWF_DIR}/conf/owf/PostgreSQLPrefsInitialCreate.sql
+} || error "Failed to import initial OWF preferences"
+
 # Set the user's password based on OPENSHIFT_POSTGRESQL_DB_PASSWORD
 {
   echo "
   ALTER USER ${user} PASSWORD '${pass}';
   " | psql -d $db -h $socket -U postgres
 } || error "Failed to change password for initial root user" 187
+
+# copy the owf.war
+{
+  cp ${OPENSHIFT_OWF_DIR}/versions/owf.war ${OPENSHIFT_OWF_DIR}/webapps
+}
+
+
