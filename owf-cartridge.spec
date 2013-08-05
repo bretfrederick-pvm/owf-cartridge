@@ -2,7 +2,7 @@
 
 Summary:       Provides OWF support
 Name:          owf-cartridge
-Version: 0.8.2
+Version: 0.8.3
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
@@ -67,5 +67,8 @@ rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
 %doc %{cartridgedir}/LICENSE
 
 %changelog
+* Sat Aug 03 2013 Bret Frederick <bret.frederick@patvmackinc.com>
+- Initial working commit (bret.frederick@patvmackinc.com)
+
 * Sat Aug 03 2013 Bret Frederick <bret.frederick@patvmackinc.com>
 - Initial working commit (bret.frederick@patvmackinc.com)
