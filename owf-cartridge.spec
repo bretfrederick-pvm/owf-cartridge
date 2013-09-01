@@ -1,7 +1,7 @@
 %global cartridgedir %{_libexecdir}/openshift/cartridges/v2/owf
 
 Summary:       Provides OWF support
-Name:          owf-cartridge
+Name:          pvm-owf-cartridge
 Version: 0.8.3
 Release:       1%{?dist}
 Group:         Development/Languages
@@ -67,8 +67,3 @@ rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
 %doc %{cartridgedir}/LICENSE
 
 %changelog
-* Sat Aug 03 2013 Bret Frederick <bret.frederick@patvmackinc.com>
-- Initial working commit (bret.frederick@patvmackinc.com)
-
-* Sat Aug 03 2013 Bret Frederick <bret.frederick@patvmackinc.com>
-- Initial working commit (bret.frederick@patvmackinc.com)
