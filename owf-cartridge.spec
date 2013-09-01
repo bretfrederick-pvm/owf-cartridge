@@ -1,7 +1,7 @@
 %global cartridgedir %{_libexecdir}/openshift/cartridges/v2/owf
 
 Summary:       Provides OWF support
-Name:          pvm-owf-cartridge
+Name:          owf-cartridge
 Version: 0.8.5
 Release:       1%{?dist}
 Group:         Development/Languages
