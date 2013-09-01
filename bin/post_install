@@ -1,5 +1,10 @@
 #!/bin/bash -eu
 
+case "$1" in
+  -v|--version)
+    version="$2"
+esac
+
 source ${OPENSHIFT_OWF_DIR}/bin/util
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
@@ -34,7 +39,8 @@ db=$OPENSHIFT_APP_NAME
 
 # copy the owf.war
 {
-  cp ${OPENSHIFT_OWF_DIR}/versions/owf.war ${OPENSHIFT_OWF_DIR}/webapps
+  echo "Deploying OWF version ${version}"
+  cp ${OPENSHIFT_OWF_DIR}/versions/${version}/owf.war ${OPENSHIFT_OWF_DIR}/webapps
 }
 
 

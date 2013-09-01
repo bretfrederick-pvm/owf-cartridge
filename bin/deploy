@@ -13,8 +13,10 @@ if [ -d $tmp ]; then
 fi
 
 if [ -d ${OPENSHIFT_REPO_DIR}/webapps ]; then
-  rsync -r --delete ${OPENSHIFT_REPO_DIR}/webapps/ ${OPENSHIFT_OWF_DIR}/webapps/
-  cp ${OPENSHIFT_OWF_DIR}/versions/owf.war ${OPENSHIFT_OWF_DIR}/webapps
+  # sync all webapps, but don't touch the OWF app
+  rsync -r --exclude 'owf' --exclude 'owf.war' --delete ${OPENSHIFT_REPO_DIR}/webapps/ ${OPENSHIFT_OWF_DIR}/webapps/
 else
-  rm -rf ${OPENSHIFT_OWF_DIR}/webapps/*
+  pushd ${OPENSHIFT_OWF_DIR}/webapps/
+  # remove all webapps except the OWF app
+  find . ! -path . ! -name '*owf*' -execdir rm -rf {} +
 fi
