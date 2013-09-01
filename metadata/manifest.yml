@@ -113,7 +113,7 @@ Additional-Control-Actions:
     - threaddump
 Version-Overrides:
   '8.0':
-    Display-Name: (InOp, Under Dev) Ozone Widget Framework 8 (OWF8)
+    Display-Name: Ozone Widget Framework 8 (OWF8) (InOP)
     Description: "Build and deploy Ozone Widgets in the cloud."
     Provides:
       - "jbossews-1.0"
