@@ -2,7 +2,7 @@
 
 Summary:       Provides OWF support
 Name:          owf-cartridge
-Version: 0.8.6
+Version: 0.8.7
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
@@ -67,12 +67,25 @@ rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
 %doc %{cartridgedir}/LICENSE
 
 %changelog
+* Mon Sep 23 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.7-1
+- OPENSHIFT-13 added template (bret.frederick@patvmackinc.com)
+- OPENSHIFT-13 added seed-db (bret.frederick@patvmackinc.com)
+- OPENSHIFT-13 #time 2h replaced template app with pvm branded one.  added owf
+  seed-db.sql (bret.frederick@patvmackinc.com)
+- OPENSHIFT-5 #time 3h #comment added STK generated .czml to demo folder in the
+  cesium.war.  added coademo.html (coa analysis widget) to the sandcastle
+  gallery with buttons to load .czml files.  updated owf seed.db with coa
+  analysis widget (bret.frederick@patvmackinc.com)
+- updated readme (bret.frederick@patvmackinc.com)
+- updated readme (bret.frederick@patvmackinc.com)
+- OPENSHIFT-11 #time 1h  #resolve completed and tested on local system
+  (bret.frederick@patvmackinc.com)
+- change owf 8 description (bret.frederick@patvmackinc.com)
+- OPENSHIFT-11 moved owf.war to correct version
+  (bret.frederick@patvmackinc.com)
+- OPENSHIFT-11 #time 4h remove owf.war from template and added some logic to
+  keep the cart provided owf app in place when deploying updates to the
+  template app (bret.frederick@patvmackinc.com)
+
 * Sat Aug 31 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.6-1
 - new package built with tito
-
-* Sat Aug 31 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.5-1
-- new package built with tito
-
-* Sat Aug 31 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.4-1
-- new package built with tito
-
