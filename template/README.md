@@ -1,3 +1,3 @@
-The OpenShift `jbossews` cartridge documentation can be found at:
+The OpenShift C2 Demo cartridge documentation can be found at:
 
-https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-jbossews/README.md
+https://bitbucket.org/pvm-engineering/openshift-cartridges/wiki/Home
