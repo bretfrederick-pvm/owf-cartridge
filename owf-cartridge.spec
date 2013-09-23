@@ -68,6 +68,7 @@ rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
 
 %changelog
 * Mon Sep 23 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.7-1
+- resolving OPENSHIFT-13
 - OPENSHIFT-13 added template (bret.frederick@patvmackinc.com)
 - OPENSHIFT-13 added seed-db (bret.frederick@patvmackinc.com)
 - OPENSHIFT-13 #time 2h replaced template app with pvm branded one.  added owf
