@@ -17,8 +17,8 @@
 		<sec:intercept-url pattern="/themes/common/images/logout/**" filters="none" />
 		<sec:intercept-url pattern="/logout.jsp" filters="none" />
         <sec:intercept-url pattern="/administration/monitoring" access="ROLE_ADMIN" />
-        <sec:intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
-    	<sec:intercept-url pattern="/**" access="ROLE_USER,ROLE_ADMIN" />
+        <sec:intercept-url pattern="/admin/**" access="ROLE_ADMIN"	requires-channel="https" />
+    	<sec:intercept-url pattern="/**" access="ROLE_USER,ROLE_ADMIN" requires-channel="https"  />
         <sec:custom-filter ref="ozoneLogoutFilter" before="LOGOUT_FILTER"/><!-- CUSTOM LOGOUT FILTER -->
         <!-- FILTER THAT CREATES OUR CUSTOM COOKIE -->
         <sec:custom-filter ref="ozoneCookieFilter" before="ANONYMOUS_FILTER"/>

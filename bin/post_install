@@ -28,7 +28,7 @@ db=$OPENSHIFT_APP_NAME
 # import the initial OWF preferences
 {
   echo "seeding OWF database"
-  psql -d $db -h $socket -U postgres -f ${OPENSHIFT_OWF_DIR}/conf/owf/seed-db.sql
+  psql -d $db -h $socket -U postgres -f ${OPENSHIFT_OWF_DIR}/conf/owf/PostgreSQLPrefsInitialCreate.sql
 } || error "Failed to import initial OWF preferences"
 
 # Set the user's password based on OPENSHIFT_POSTGRESQL_DB_PASSWORD

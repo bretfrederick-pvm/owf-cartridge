@@ -4375,5 +4375,13 @@
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-
+    <!-- BAF: this is needed to ensure all traffic is directed through the Paas SSL termination point -->
+    <security-constraint>
+       <web-resource-collection>
+           <url-pattern>/*</url-pattern>
+       </web-resource-collection>
+       <user-data-constraint>
+           <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+       </user-data-constraint>
+   </security-constraint>
 </web-app>
