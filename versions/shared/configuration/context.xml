@@ -53,4 +53,7 @@
               maxActive="20"
               maxIdle="5"
               maxWait="10000"/>
+    <!-- BAF: added to enable spring security to operate over ssl behind the OpenShiftproxy --> 
+    <Valve className="org.apache.catalina.valves.RemoteIpValve"
+                protocolHeader="x-forwarded-proto"></Valve>
 </Context>
