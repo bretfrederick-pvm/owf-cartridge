@@ -2,7 +2,7 @@
 
 Summary:       Provides OWF support
 Name:          owf-cartridge
-Version: 0.8.7
+Version: 0.8.8
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
@@ -67,6 +67,9 @@ rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
 %doc %{cartridgedir}/LICENSE
 
 %changelog
+* Sat Nov 23 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.8-1
+- new package built with tito after moving into own repo
+
 * Mon Sep 23 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.7-1
 - resolving OPENSHIFT-13
 - OPENSHIFT-13 added template (bret.frederick@patvmackinc.com)
