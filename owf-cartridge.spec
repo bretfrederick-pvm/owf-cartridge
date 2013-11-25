@@ -2,7 +2,7 @@
 
 Summary:       Provides OWF support
 Name:          owf-cartridge
-Version: 0.8.8
+Version: 0.8.9
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
@@ -67,6 +67,9 @@ rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
 %doc %{cartridgedir}/LICENSE
 
 %changelog
+* Sun Nov 24 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.9-1
+- OS-41 #comment added Valve to context.xml (bret.frederick@patvmackinc.com)
+
 * Sat Nov 23 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.8-1
 - new package built with tito after moving into own repo
 
