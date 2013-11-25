@@ -2,7 +2,7 @@
 
 Summary:       Provides OWF support
 Name:          owf-cartridge
-Version: 0.8.10
+Version: 0.8.11
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
@@ -67,6 +67,12 @@ rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
 %doc %{cartridgedir}/LICENSE
 
 %changelog
+* Sun Nov 24 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.11-1
+- OS-41 #time 4h #comment worked on getting CAS auth running.  requires the
+  node cert & key to be stored in a keystore the app has access to.  need to
+  work with RedHat on that one.  basic SSL task is mostly done, moving to test
+  (bret.frederick@patvmackinc.com)
+
 * Sun Nov 24 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.9-1
 - OS-41 #comment added Valve to context.xml (bret.frederick@patvmackinc.com)
 
