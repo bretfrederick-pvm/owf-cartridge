@@ -3,7 +3,7 @@ Cartridge-Short-Name: OWF
 Cartridge-Vendor: pvm
 Cartridge-Version: '0.0.1'
 Compatible-Versions: ['0.0.2', '0.0.3']
-Display-Name: Ozone Widget Framework 7 (OWF-7)
+Display-Name: Ozone Widget Framework 7 (OWF 7)
 Description: "Build and deploy Ozone Widgets in the cloud."
 Version: '7.0'
 Versions: ['7.0']
@@ -15,9 +15,9 @@ Categories:
   - java
   - tomcat7
   - web_framework
-Website: http://www.redhat.com/products/jbossenterprisemiddleware/web-server/
+Website: http://shadow-soft.com/
 Help-Topics:
-  "Developer Center": https://www.openshift.com/developers
+  "Developer Center": https://patvmackinc.com/
 Cart-Data:
   - Key: "username"
     Type: cart_data
