@@ -70,6 +70,10 @@ Provides:
   - "jboss-ews-2.0.0"
   - "postgresql-8.4"
   - "postgresql"
+  - "owf-7.3"
+  - "owf"
+  - "owf(version) = 7.3"
+  - "owf(version) >= 7.0"
 Conflicts:
   - mysql-5.1
 Publishes:
@@ -83,7 +87,7 @@ Publishes:
     Type: "ENV:NET_TCP:db:connection-info"
 Scaling:
   Min: 1
-  Max: 1
+  Max: -1
 Subscribes:
   set-env:
     Type: "ENV:*"
@@ -112,20 +116,3 @@ Endpoints:
 Additional-Control-Actions:
     - threaddump
 Version-Overrides:
-  '8.0':
-    Display-Name: Ozone Widget Framework 8 (OWF8) (InOP)
-    Description: "Build and deploy Ozone Widgets in the cloud."
-    Provides:
-      - "jbossews-1.0"
-      - "jbossews"
-      - "jbossews(version) = 1.0.0"
-      - "jbossews(version) >= 1.0"
-      - "jboss-ews-1.0"
-      - "jboss-ews-1.0.0"
-    Categories:
-      - service
-      - java
-      - jboss
-      - tomcat
-      - tomcat6
-      - web_framework
