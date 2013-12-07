@@ -50,7 +50,7 @@ alternatives --install /etc/alternatives/maven-3.0 maven-3.0 /usr/share/maven 10
 alternatives --set maven-3.0 /usr/share/maven
 %endif
 
-#/usr/sbin/oo-admin-cartridge -a install -s %{cartridgedir}
+/usr/sbin/oo-admin-cartridge -a install -s %{cartridgedir}
 #/usr/sbin/oo-admin-broker-cache -c --console
 
 %postun
