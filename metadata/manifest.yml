@@ -3,10 +3,10 @@ Cartridge-Short-Name: OWF
 Cartridge-Vendor: pvm
 Cartridge-Version: '0.0.1'
 Compatible-Versions: ['0.0.2', '0.0.3']
-Display-Name: Ozone Widget Framework 7 (OWF7)
+Display-Name: Ozone Widget Framework 7 (OWF-7)
 Description: "Build and deploy Ozone Widgets in the cloud."
 Version: '7.0'
-Versions: ['7.0', '8.0']
+Versions: ['7.0']
 License: Apache
 License-Url: http://the.apache.com/license/url
 Vendor:  pvm.com
@@ -115,5 +115,3 @@ Endpoints:
     Public-Port-Name:  DB_PROXY_POR
 Additional-Control-Actions:
     - threaddump
-Version-Overrides:
-   '8.0':
