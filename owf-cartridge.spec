@@ -6,8 +6,8 @@ Version: 0.8.11
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
-URL:           http://www.openshift.com
-Source0:       http://mirror.openshift.com/pub/openshift-origin/source/%{name}/%{name}-%{version}.tar.gz
+URL:           http://www.shadow-soft.com
+Source0:       http://
 Requires:      rubygem(openshift-origin-node)
 Requires:      openshift-origin-cartridge-jbossews
 Requires:      openshift-origin-cartridge-postgresql
@@ -50,12 +50,12 @@ alternatives --install /etc/alternatives/maven-3.0 maven-3.0 /usr/share/maven 10
 alternatives --set maven-3.0 /usr/share/maven
 %endif
 
-/usr/sbin/oo-admin-cartridge -a install -s %{cartridgedir}
+#/usr/sbin/oo-admin-cartridge -a install -s %{cartridgedir}
 #/usr/sbin/oo-admin-broker-cache -c --console
 
 %postun
-rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
-/usr/sbin/oo-admin-broker-cache -c --console
+#rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
+#/usr/sbin/oo-admin-broker-cache -c --console
 
 %files
 %dir %{cartridgedir}
