@@ -51,7 +51,7 @@ alternatives --set maven-3.0 /usr/share/maven
 %endif
 
 /usr/sbin/oo-admin-cartridge -a install -s %{cartridgedir}
-/usr/sbin/oo-admin-broker-cache -c --console
+#/usr/sbin/oo-admin-broker-cache -c --console
 
 %postun
 rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
