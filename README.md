@@ -10,7 +10,6 @@ Dependencies:
 
 Provides:
  - Ozone Widget Framework 7
- - Ozone Widget Framework 8
 
 Building the RPM package
 ------------------------
