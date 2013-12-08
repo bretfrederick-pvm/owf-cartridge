@@ -1,13 +1,13 @@
 %global cartridgedir %{_libexecdir}/openshift/cartridges/v2/owf/
 
-Summary:       Provides OWF support
+Summary:       Provides OWF support for OpenShift
 Name:          owf-cartridge
 Version: 0.8.12
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
 URL:           http://www.shadow-soft.com
-Source0:       http://
+Source0:       https://bitbucket.org/pvm-engineering/owf-cartridge/src
 Requires:      rubygem(openshift-origin-node)
 Requires:      openshift-origin-cartridge-jbossews
 Requires:      openshift-origin-cartridge-postgresql

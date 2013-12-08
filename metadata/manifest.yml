@@ -1,6 +1,6 @@
 Name: owf
 Cartridge-Short-Name: OWF
-Cartridge-Vendor: pvm
+Cartridge-Vendor: shadowsoft
 Cartridge-Version: '0.0.1'
 Compatible-Versions: ['0.0.2', '0.0.3']
 Display-Name: Ozone Widget Framework 7 (OWF 7)
@@ -9,7 +9,7 @@ Version: '7.0'
 Versions: ['7.0']
 License: Apache
 License-Url: http://the.apache.com/license/url
-Vendor:  pvm.com
+Vendor:  Shadow-Soft 
 Categories:
   - service
   - java
@@ -17,7 +17,7 @@ Categories:
   - web_framework
 Website: http://shadow-soft.com/
 Help-Topics:
-  "Developer Center": https://patvmackinc.com/
+  "Developer Center": https://bitbucket.org/pvm-engineering/owf-cartridge/
 Cart-Data:
   - Key: "username"
     Type: cart_data
