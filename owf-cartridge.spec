@@ -2,7 +2,7 @@
 
 Summary:       Provides OWF support
 Name:          owf-cartridge
-Version: 0.8.11
+Version: 0.8.12
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
@@ -67,6 +67,16 @@ alternatives --set maven-3.0 /usr/share/maven
 %doc %{cartridgedir}/LICENSE
 
 %changelog
+* Sun Dec 08 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.12-1
+- OS-40 #time 2h #comment redirect root context to owf
+  (bret.frederick@patvmackinc.com)
+- OS-40 #time 2h #comment refactored install to use OSE commands.  started
+  removal of template application. (bret.frederick@patvmackinc.com)
+- OS-40 #start-progress #time 1h #comment refactoring the current prototype
+  cart for production and delivery to Shadow-Soft.  set it to scalable.
+  removed the maven build.  removed the v8.0 owf.
+  (bret.frederick@patvmackinc.com)
+
 * Sun Nov 24 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.11-1
 - OS-41 #time 4h #comment worked on getting CAS auth running.  requires the
   node cert & key to be stored in a keystore the app has access to.  need to
