@@ -1,4 +1,4 @@
-%global cartridgedir %{_libexecdir}/openshift/cartridges/v2/
+%global cartridgedir %{_libexecdir}/openshift/cartridges/v2/owf/
 
 Summary:       Provides OWF support
 Name:          owf-cartridge
@@ -50,7 +50,7 @@ alternatives --install /etc/alternatives/maven-3.0 maven-3.0 /usr/share/maven 10
 alternatives --set maven-3.0 /usr/share/maven
 %endif
 
-/usr/sbin/oo-admin-cartridge -a install -R -s %{cartridgedir}
+/usr/sbin/oo-admin-cartridge -a install -R -s %{cartridgedir}../
 /usr/sbin/oo-admin-broker-cache -c --console
 
 %postun
