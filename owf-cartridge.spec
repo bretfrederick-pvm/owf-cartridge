@@ -21,7 +21,7 @@ BuildRequires: jpackage-utils
 BuildArch:     noarch
 
 %description
-Provides OWF support to OpenShift. (Cartridge Format V2)
+Provides the Ozone Widget Framework on  OpenShift. (Cartridge Format V2)
 
 %prep
 %setup -q
