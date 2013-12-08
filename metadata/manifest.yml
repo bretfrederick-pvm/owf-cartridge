@@ -87,7 +87,7 @@ Publishes:
     Type: "ENV:NET_TCP:db:connection-info"
 Scaling:
   Min: 1
-  Max: -1
+  Max: 1
 Subscribes:
   set-env:
     Type: "ENV:*"
