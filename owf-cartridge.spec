@@ -51,11 +51,19 @@ alternatives --set maven-3.0 /usr/share/maven
 %endif
 
 /usr/sbin/oo-admin-cartridge --action install -R -s %{cartridgedir}../
-/usr/sbin/oo-admin-broker-cache --clear --console
+if [ -f /usr/sbin/oo-admin-broker-cache ]
+then
+    echo "clearing broker cache"
+    /usr/sbin/oo-admin-broker-cache --clear --console
+fi
 
 %postun
 /usr/sbin/oo-admin-cartridge --action erase --name owf --version 7.0 --cartridge_version 0.0.1
-/usr/sbin/oo-admin-broker-cache --clear --console
+if [ -f /usr/sbin/oo-admin-broker-cache ]
+then
+    echo "clearing broker cache"
+    /usr/sbin/oo-admin-broker-cache --clear --console
+fi
 
 %files
 %dir %{cartridgedir}
