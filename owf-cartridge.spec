@@ -1,13 +1,13 @@
-%global cartridgedir %{_libexecdir}/openshift/cartridges/v2/owf
+%global cartridgedir %{_libexecdir}/openshift/cartridges/v2/owf/
 
-Summary:       Provides OWF support
+Summary:       Provides OWF support for OpenShift
 Name:          owf-cartridge
-Version: 0.8.11
+Version: 0.8.13
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
-URL:           http://www.openshift.com
-Source0:       http://mirror.openshift.com/pub/openshift-origin/source/%{name}/%{name}-%{version}.tar.gz
+URL:           http://www.shadow-soft.com
+Source0:       https://bitbucket.org/pvm-engineering/owf-cartridge/src
 Requires:      rubygem(openshift-origin-node)
 Requires:      openshift-origin-cartridge-jbossews
 Requires:      openshift-origin-cartridge-postgresql
@@ -21,7 +21,7 @@ BuildRequires: jpackage-utils
 BuildArch:     noarch
 
 %description
-Provides OWF support to OpenShift. (Cartridge Format V2)
+Provides the Ozone Widget Framework on  OpenShift. (Cartridge Format V2)
 
 %prep
 %setup -q
@@ -50,12 +50,12 @@ alternatives --install /etc/alternatives/maven-3.0 maven-3.0 /usr/share/maven 10
 alternatives --set maven-3.0 /usr/share/maven
 %endif
 
-/usr/sbin/oo-admin-cartridge -a install -s %{cartridgedir}
-/usr/sbin/oo-admin-broker-cache -c --console
+/usr/sbin/oo-admin-cartridge --action install -R -s %{cartridgedir}../
+/usr/sbin/oo-admin-broker-cache --clear --console
 
 %postun
-rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
-/usr/sbin/oo-admin-broker-cache -c --console
+/usr/sbin/oo-admin-cartridge --action erase --name owf --version 7.0 --cartridge_version 0.0.1
+/usr/sbin/oo-admin-broker-cache --clear --console
 
 %files
 %dir %{cartridgedir}
@@ -67,6 +67,22 @@ rm -rf /var/lib/openshift/.cartridge_repository/pvm-owf
 %doc %{cartridgedir}/LICENSE
 
 %changelog
+* Sun Dec 08 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.13-1
+- OS-40 #time 3h #comment finished dev.  moving to test
+  (bret.frederick@patvmackinc.com)
+- OS-40 #comment turn scaling off and create a new story for scaling
+  (bret.frederick@patvmackinc.com)
+
+* Sun Dec 08 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.12-1
+- OS-40 #time 2h #comment redirect root context to owf
+  (bret.frederick@patvmackinc.com)
+- OS-40 #time 2h #comment refactored install to use OSE commands.  started
+  removal of template application. (bret.frederick@patvmackinc.com)
+- OS-40 #start-progress #time 1h #comment refactoring the current prototype
+  cart for production and delivery to Shadow-Soft.  set it to scalable.
+  removed the maven build.  removed the v8.0 owf.
+  (bret.frederick@patvmackinc.com)
+
 * Sun Nov 24 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.11-1
 - OS-41 #time 4h #comment worked on getting CAS auth running.  requires the
   node cert & key to be stored in a keystore the app has access to.  need to

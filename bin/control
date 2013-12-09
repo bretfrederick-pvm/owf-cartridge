@@ -157,11 +157,11 @@ case "$1" in
         exit 0
     ;;
     build)
-        ${OPENSHIFT_OWF_DIR}/bin/build
+	echo "nonoperational: OWF Cartridge does not support the build operation"
         exit 0
     ;;
     deploy)
-        ${OPENSHIFT_OWF_DIR}/bin/deploy
+	echo "nonoperational: OWF Cartridge does not support the deploy operation"
         exit 0
     ;;
     update-configuration)

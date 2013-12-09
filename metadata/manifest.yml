@@ -1,23 +1,23 @@
 Name: owf
 Cartridge-Short-Name: OWF
-Cartridge-Vendor: pvm
+Cartridge-Vendor: shadowsoft
 Cartridge-Version: '0.0.1'
 Compatible-Versions: ['0.0.2', '0.0.3']
-Display-Name: Ozone Widget Framework 7 (OWF7)
+Display-Name: Ozone Widget Framework 7 (OWF 7)
 Description: "Build and deploy Ozone Widgets in the cloud."
 Version: '7.0'
-Versions: ['7.0', '8.0']
+Versions: ['7.0']
 License: Apache
 License-Url: http://the.apache.com/license/url
-Vendor:  pvm.com
+Vendor:  Shadow-Soft 
 Categories:
   - service
   - java
-  - tomcat7
+  - javascript
   - web_framework
-Website: http://www.redhat.com/products/jbossenterprisemiddleware/web-server/
+Website: http://shadow-soft.com/
 Help-Topics:
-  "Developer Center": https://www.openshift.com/developers
+  "Developer Center": https://bitbucket.org/pvm-engineering/owf-cartridge/
 Cart-Data:
   - Key: "username"
     Type: cart_data
@@ -70,6 +70,10 @@ Provides:
   - "jboss-ews-2.0.0"
   - "postgresql-8.4"
   - "postgresql"
+  - "owf-7.3"
+  - "owf"
+  - "owf(version) = 7.3"
+  - "owf(version) >= 7.0"
 Conflicts:
   - mysql-5.1
 Publishes:
@@ -111,21 +115,3 @@ Endpoints:
     Public-Port-Name:  DB_PROXY_POR
 Additional-Control-Actions:
     - threaddump
-Version-Overrides:
-  '8.0':
-    Display-Name: Ozone Widget Framework 8 (OWF8) (InOP)
-    Description: "Build and deploy Ozone Widgets in the cloud."
-    Provides:
-      - "jbossews-1.0"
-      - "jbossews"
-      - "jbossews(version) = 1.0.0"
-      - "jbossews(version) >= 1.0"
-      - "jboss-ews-1.0"
-      - "jboss-ews-1.0.0"
-    Categories:
-      - service
-      - java
-      - jboss
-      - tomcat
-      - tomcat6
-      - web_framework
