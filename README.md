@@ -1,4 +1,3 @@
-
 Ozone Widget Framework (OWF) Cartridge on OpenShift
 ===================
 
@@ -18,12 +17,19 @@ Prerequisites
 * RHEL or Fedora with the "Development Tools" group installed
 
 * The Tito rpm build tools
+
 > yum install tito
 
 * Git (if not already installed)
+
 > yum install git
+
+* Clone & build the repo
+
 > git clone https://*yourusername*@bitbucket.org/pvm-engineering/openshift-cartridges.git
-> cd  openshift-cartridges/owf-cartridge
+
+> cd owf-cartridge
+
 > tito build --rpm --test
 
 Tito will generate the rpm package in /tmp/tito/noarch/owf-cartridge{*}.rpm
