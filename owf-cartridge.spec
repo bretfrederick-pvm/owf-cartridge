@@ -2,7 +2,7 @@
 
 Summary:       Provides OWF support for OpenShift
 Name:          owf-cartridge
-Version: 0.8.14
+Version: 0.8.15
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
@@ -75,6 +75,12 @@ fi
 %doc %{cartridgedir}/LICENSE
 
 %changelog
+* Mon Dec 16 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.15-1
+- OS-67 #start-progress #time 1h #comment replaced default owf background image
+  with shadow-soft image. (bret.frederick@patvmackinc.com)
+- OS-40 #resolve #time 1h #comment merged final changes and resolving task
+  (bret.frederick@patvmackinc.com)
+
 * Sun Dec 08 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.14-1
 - OS-40 #comment fix error when installing on nodes without a broker
   (bret.frederick@patvmackinc.com)
