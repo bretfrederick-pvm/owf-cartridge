@@ -76,6 +76,7 @@ fi
 
 %changelog
 * Mon Dec 16 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.15-1
+- OS-67 #resolve #time .5h #comment tested on local machine.
 - OS-67 #start-progress #time 1h #comment replaced default owf background image
   with shadow-soft image. (bret.frederick@patvmackinc.com)
 - OS-40 #resolve #time 1h #comment merged final changes and resolving task
