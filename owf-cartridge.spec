@@ -2,7 +2,7 @@
 
 Summary:       Provides OWF support for OpenShift
 Name:          owf-cartridge
-Version: 0.8.15
+Version: 0.8.16
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
@@ -75,6 +75,10 @@ fi
 %doc %{cartridgedir}/LICENSE
 
 %changelog
+* Wed Jan 08 2014 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.16-1
+- OS-66 set group overrides (bret.frederick@patvmackinc.com)
+- OS-66 set cart to scalable (bret.frederick@patvmackinc.com)
+
 * Mon Dec 16 2013 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.15-1
 - OS-67 #resolve #time .5h #comment tested on local machine.
 - OS-67 #start-progress #time 1h #comment replaced default owf background image

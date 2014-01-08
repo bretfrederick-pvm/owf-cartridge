@@ -85,15 +85,16 @@ Publishes:
     Type: "NET_TCP:gear-endpoint-info"
   publish-db-connection-info:
     Type: "ENV:NET_TCP:db:connection-info"
-Scaling:
-  Min: 1
-  Max: 1
 Subscribes:
   set-env:
     Type: "ENV:*"
     Required: false
   set-jdbc-info:
     Type: "NET_TCP:jdbc"
+Group-Overrides:
+  - components:
+    - "jbossews-2.0"
+    - web_proxy
 Endpoints:
   - Private-IP-Name:   IP
     Private-Port-Name: HTTP_PORT
