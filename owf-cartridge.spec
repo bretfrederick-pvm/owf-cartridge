@@ -76,6 +76,9 @@ fi
 
 %changelog
 * Wed Jan 08 2014 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.16-1
+- OS-66 #resolve #comment merged
+
+* Wed Jan 08 2014 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.16-1
 - OS-66 set group overrides (bret.frederick@patvmackinc.com)
 - OS-66 set cart to scalable (bret.frederick@patvmackinc.com)
 
