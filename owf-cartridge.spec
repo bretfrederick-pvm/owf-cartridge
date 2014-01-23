@@ -2,7 +2,7 @@
 
 Summary:       Provides OWF support for OpenShift
 Name:          owf-cartridge
-Version: 0.8.16
+Version: 0.8.17
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
@@ -75,6 +75,9 @@ fi
 %doc %{cartridgedir}/LICENSE
 
 %changelog
+* Thu Jan 23 2014 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.17-1
+- 
+
 * Wed Jan 08 2014 Bret Frederick <bret.frederick@patvmackinc.com> 0.8.16-1
 - OS-66 #resolve #comment merged
 
