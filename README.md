@@ -25,7 +25,7 @@ Prerequisites
 
 * Clone & build the repo
 
-        > git clone https://github.com/bretfrederick-pvm/owf-cartridge.git
+        > git clone https://github.com/Shadow-Soft/owf-widget-cartridge.git
 
         > cd owf-widget-cartridge
 
@@ -51,13 +51,15 @@ Use the RedHat Cloud (rhc) command line utility to create a new Ozone applicatio
 
 ###OpenShift Online
 using the RedHat Cloud (rhc) command line client utility
-        > rhc create-app ozone https://raw.github.com/bretfrederick-pvm/owf-cartridge/master/metadata/manifest.yml
+
+        > rhc create-app ozone https://raw.github.com/Shadow-Soft/owf-widget-cartridge/master/metadata/manifest.yml
+        
 using the OpenShift Online management console
 * Log into your OpenShift Online account at https://openshift.redhat.com
 * Navigate to "MyApps" then to "Applications"
 * Select "Add Application" (or create first application if you don't have any yet)
 * Scroll down to the "Code Anything" section and enter the manifest URL in the "URL to a cartridge definition"
-  https://raw.github.com/bretfrederick-pvm/owf-cartridge/master/metadata/manifest.yml
+  https://raw.github.com/Shadow-Soft/owf-widget-cartridge/master/metadata/manifest.yml
 
 ##Using the Cartridge
 Once deployed, the source repository (Git repo) provided by the create-app command contains all of the Ozone Widget Framework configuration information under /path/to/repo/.openshift/configuration/owf directory
