@@ -4,10 +4,11 @@
 This git repository contains the source for the owf-widget-cartridge RPM package.
 
 **Dependencies:**
-* JBoss EWS Cartridge (openshift-origin-jbossews)
+* JBoss EWS Cartridge (openshift-origin-cartridge-jbossews)
+* PostgreSQL Cartridge (openshift-origin-cartridge-postgres)
 
 **Provides:**
- * Ozone Widget template
+ * Ozone Widget Framework
 
 ##Building the RPM package
 
