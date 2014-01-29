@@ -1,4 +1,3 @@
-
 #Ozone Widget Cartridge on OpenShift
 
 
@@ -43,8 +42,11 @@ The cartridge can be deployed as either an RPM installed on the OpenShift Enterp
 
 ###OpenShift Enterprise
 Install the RPM using your favorite package manager
+
         > yum localinstall /path/to/owf-cartridge-{*}.rpm
+        
 Use the RedHat Cloud (rhc) command line utility to create a new Ozone application
+
         > rhc app create ozone shadowsoft-owf-7.0
 
 ###OpenShift Online
@@ -67,4 +69,4 @@ Once deployed, the source repository (Git repo) provided by the create-app comma
 
 
 ##Known Issues
-* The OWF Cartridge depends on the JBossEWS cartridge (openshift-origin-cartridge-jbossews), which in turn depends on the tomcat7 package.  However, the "tomcat7" package only exists in RedHat repositories and is only accessible if you have a RedHat entitlement.  The community equivalent of "tomcat7" is the "tomcat" (ommit 7) package.  However that package does not satisfy JBossEWS cartridge dependency.
+* This issue applies if deploying on OpenShift Origin (community version) on any non-RHEL system (e.g. CentOS or Fedora).  The OWF Cartridge depends on the JBossEWS cartridge (openshift-origin-cartridge-jbossews), which in turn depends on the tomcat7 package.  However, the "tomcat7" package only exists in RedHat repositories and is only accessible if you have a RedHat entitlement.  The community equivalent of "tomcat7" is the "tomcat" (ommit 7) package.  However that package does not satisfy JBossEWS cartridge dependency.
