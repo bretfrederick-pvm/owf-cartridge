@@ -5,7 +5,8 @@ SCRIPT_PATH="`dirname \"$0\"`"              # relative
 SCRIPT_PATH="`( cd \"$SCRIPT_PATH\" && pwd )`" 
 
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
-source ${OPENSHIFT_OWF_DIR}/bin/util
+#source ${OPENSHIFT_OWF_DIR}/bin/util
+source util
 
 if ! [ $# -eq 1 ]
 then

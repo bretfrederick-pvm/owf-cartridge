@@ -6,7 +6,7 @@ case "$1" in
 esac
 
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
-source ${OPENSHIFT_OWF_DIR}/bin/util
+source util
 
 SYSTEM_JBOSSEWS_DIR="/etc/alternatives/jbossews-2.0"
 
